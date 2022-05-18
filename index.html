@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="#">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercice son</title>
+    <style>
+        svg{
+            max-width: 100%;
+            height:auto;
+            border:1px solid #ccc;
+          }
+          audio{
+            width:100%;
+          }
+          
+      
+    </style>
+</head>
+<body>
+    <audio src="Ona_Poison.mp3" controls></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+    /* CODE poUr le chargement du SVG */
+    fetch("FinalJeSaisPas.svg")
+        .then(response => response.text())
+        .then(svg => {
+            document.body.insertAdjacentHTML("afterbegin", svg)
+            anim(); // on peut créer l'animation 
+    });
+
+    /* pour controler LE SON dans le HTML*/
+    const audio = document.querySelector("audio");
+    
+    /* Notre timeline */
+    const tl = gsap.timeline();
+
+    /* function pour créer l'animation APRèS le chargement du SVG */
+    function anim(){
+         // réglages
+
+  tl.pause();
+  tl.set("#Fairy", { transformOrigin: "center center", opacity: 1, scale: 1 });
+  tl.set("#Char", { transformOrigin: "center center", opacity: 1, scale: 5 });
+  tl.set("#LEyes", { transformOrigin: "center center", opacity: 0, scale: 0.5 });
+  tl.set("#OnaPoison", { transformOrigin: "center center", opacity: 1, scale: 2 });
+  //tl.set("#LEyes", {opacity: 0, scale: 1 });
+  tl.set("#Listen", {opacity: 0, scale: 1 });
+  tl.set("#Credit", {opacity: 0, scale: 1 });
+  tl.set("#Body", {opacity: 0, scale: 1 });
+  tl.set("#HEyes", {opacity: 0, scale: 1 });
+  tl.set("#Epaules", {opacity: 0, scale: 1 });
+  tl.set("#BrasD", {opacity: 0, scale: 1 });
+  tl.set("#BrasG", {opacity: 0, scale: 1 });
+  tl.set("#Chest", {opacity: 0, scale: 1 });
+  tl.set("#ChestL", {opacity: 0, scale: 1 });
+  tl.set("#ChestR", {opacity: 0, scale: 1 });
+  tl.set("#HeadL", {opacity: 0, scale: 1 });
+  tl.set("#HeadR", {opacity: 0, scale: 1 });
+  tl.set("#Left", {opacity: 0, scale: 1});
+  tl.set("#Right", {opacity: 0, scale: 1});
+  tl.set("#Zoom", {opacity: 0, scale: 1});
+  tl.set("#Polygon1", {opacity: 0, scale: 1});
+  tl.set("#Polygon2", {opacity: 0, scale: 1});
+  tl.set("#Polygon3", {opacity: 0, scale: 1});
+  tl.set("#Polygon4", {opacity: 0, scale: 1});
+  tl.set("#OnaPoison", {opacity: 1, scale: 1});
+  tl.set("#Unmovable",{opacity: 0.5, scale: 1});
+  tl.set("#Appear1", {opacity: 0, scale: 1});
+  tl.set("#Appear2", {opacity: 0, scale: 1});
+  tl.set("#Appear3", {opacity: 0, scale: 1});
+  tl.set("#Appear4", {opacity: 0, scale: 1});
+  tl.set("#Appear5", {opacity: 0, scale: 1});
+  tl.set("#Appear6", {opacity: 0, scale: 1});
+  tl.set("#Appear7", {opacity: 0, scale: 1});
+  tl.set("#AppearInter7", {opacity: 0, scale: 1});
+  tl.set("#Appear8", {opacity: 0, scale: 1});
+  tl.set("#Appear9", {opacity: 0, scale: 1});
+  
+  tl.to('svg', {opacity:1, duration:audio.duration});
+    
+  // Char glisse
+  tl.to("#Char", { scale: 1, duration:7.0}, 0);
+  tl.to("#OnaPoison", { scale: 2, duration:0.0}, 0);
+  tl.to("#OnaPoison", { scale: 1, duration:7.0}, 0.1);
+  tl.to("#OnaPoison", { opacity: 0, duration:7.0}, 0.1);
+  //tl.to("#OnaPoison", { scale: 1, duration:7.0}, 0);
+  //Zoom Continue
+  tl.to("#LEyes", {opacity:1, scale: 1, duration:15.9}, 7.1);
+  // ''Start''
+  //tl.to("#LEyes", {opacity:1, scale: 1, duration:0.2}, 7.1);
+  tl.to("#Chest", {opacity:1, scale: 1, duration:0.2}, 7.5);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:0.2}, 7.7);
+  tl.to("#Chest", {opacity:1, scale: 1, duration:0.2}, 7.9);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:0.2}, 8.1);
+  tl.to("#Chest", {opacity:1, scale: 1, duration:0.2}, 8.3);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:0.2}, 8.5);
+  tl.to("#Chest", {opacity:1, scale: 1, duration:0.2}, 8.7);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:0.2}, 8.9);
+  // Pause I
+  tl.to("#Epaules", {opacity:1, scale: 1, duration:0.2}, 9.4);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:0.2}, 9.6);
+  tl.to("#Epaules", {opacity:1, scale: 1, duration:0.2}, 9.8);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:0.2}, 10.0);
+  tl.to("#Epaules", {opacity:1, scale: 1, duration:0.2}, 10.2);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:0.2}, 10.4);
+  tl.to("#Epaules", {opacity:1, scale: 1, duration:0.2}, 10.6);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:0.2}, 10.8);
+  // Pause II
+  tl.to("#BrasG", {opacity:1, scale: 1, duration:0.2}, 11.2);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:0.2}, 11.4);
+  tl.to("#BrasG", {opacity:1, scale: 1, duration:0.2}, 11.6);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:0.2}, 11.8);
+  tl.to("#BrasG", {opacity:1, scale: 1, duration:0.2}, 12.0);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:0.2}, 12.2);
+  tl.to("#BrasG", {opacity:1, scale: 1, duration:0.2}, 12.4);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:0.2}, 12.6);
+  tl.to("#BrasD", {opacity:1, scale: 1, duration:0.2}, 11.2);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:0.2}, 11.4);
+  tl.to("#BrasD", {opacity:1, scale: 1, duration:0.2}, 11.6);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:0.2}, 11.8);
+  tl.to("#BrasD", {opacity:1, scale: 1, duration:0.2}, 12.0);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:0.2}, 12.2);
+  tl.to("#BrasD", {opacity:1, scale: 1, duration:0.2}, 12.4);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:0.2}, 12.6);
+  //Pause III
+  tl.to("#ChestL", {opacity:1, scale: 1, duration:0.2}, 13);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:0.2}, 13.2);
+  tl.to("#ChestL", {opacity:1, scale: 1, duration:0.2}, 13.4);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:0.2}, 13.6);
+  tl.to("#ChestL", {opacity:1, scale: 1, duration:0.2}, 13.8);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:0.2}, 14);
+  tl.to("#ChestL", {opacity:1, scale: 1, duration:0.2}, 14.2);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:0.2}, 14.4);
+  tl.to("#ChestR", {opacity:1, scale: 1, duration:0.2}, 13);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:0.2}, 13.2);
+  tl.to("#ChestR", {opacity:1, scale: 1, duration:0.2}, 13.4);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:0.2}, 13.6);
+  tl.to("#ChestR", {opacity:1, scale: 1, duration:0.2}, 13.8);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:0.2}, 14);
+  tl.to("#ChestR", {opacity:1, scale: 1, duration:0.2}, 14.2);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:0.2}, 14.4);
+  //Pause IV (change pour chest)
+  tl.to("#HeadL", {opacity:1, scale: 1, duration:0.2}, 14.8);//16.6
+  tl.to("#HeadL", {opacity:0, scale: 1, duration:0.2}, 15);//16.8
+  tl.to("#HeadL", {opacity:1, scale: 1, duration:0.2}, 15.2);//17
+  tl.to("#HeadL", {opacity:0, scale: 1, duration:0.2}, 15.4);//17.2
+  tl.to("#HeadL", {opacity:1, scale: 1, duration:0.2}, 15.6);//17.4
+  tl.to("#HeadL", {opacity:0, scale: 1, duration:0.2}, 15.8);//17.6
+  tl.to("#HeadL", {opacity:1, scale: 1, duration:0.2}, 16);//17.8
+  tl.to("#HeadL", {opacity:0, scale: 1, duration:0.2}, 16.2);//18
+  tl.to("#HeadR", {opacity:1, scale: 1, duration:0.2}, 14.8);
+  tl.to("#HeadR", {opacity:0, scale: 1, duration:0.2}, 15);
+  tl.to("#HeadR", {opacity:1, scale: 1, duration:0.2}, 15.2);
+  tl.to("#HeadR", {opacity:0, scale: 1, duration:0.2}, 15.4);
+  tl.to("#HeadR", {opacity:1, scale: 1, duration:0.2}, 15.6);
+  tl.to("#HeadR", {opacity:0, scale: 1, duration:0.2}, 15.8);
+  tl.to("#HeadR", {opacity:1, scale: 1, duration:0.2}, 16);
+  tl.to("#HeadR", {opacity:0, scale: 1, duration:0.2}, 16.2);
+  //Pause V (change pour VI)
+  tl.to("#Chest", {opacity:1, scale: 1, duration:0.2}, 16.6);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:0.2}, 16.8);
+  tl.to("#Chest", {opacity:1, scale: 1, duration:0.2}, 17);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:0.2}, 17.2);
+  tl.to("#Chest", {opacity:1, scale: 1, duration:0.2}, 17.4);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:0.2}, 17.6);
+  tl.to("#Chest", {opacity:1, scale: 1, duration:0.2}, 17.8);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:0.2}, 18);
+  tl.to("#ChestL", {opacity:1, scale: 1, duration:0.2}, 16.6);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:0.2}, 16.8);
+  tl.to("#ChestL", {opacity:1, scale: 1, duration:0.2}, 17);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:0.2}, 17.2);
+  tl.to("#ChestL", {opacity:1, scale: 1, duration:0.2}, 17.4);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:0.2}, 17.6);
+  tl.to("#ChestL", {opacity:1, scale: 1, duration:0.2}, 17.8);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:0.2}, 18);
+  tl.to("#ChestR", {opacity:1, scale: 1, duration:0.2}, 16.6);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:0.2}, 16.8);
+  tl.to("#ChestR", {opacity:1, scale: 1, duration:0.2}, 17);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:0.2}, 17.2);
+  tl.to("#ChestR", {opacity:1, scale: 1, duration:0.2}, 17.4);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:0.2}, 17.6);
+  tl.to("#ChestR", {opacity:1, scale: 1, duration:0.2}, 17.8);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:0.2}, 18);
+  //Pause VI (Head + Chest L ET R)
+  tl.to("#Epaules", {opacity:1, scale: 1, duration:0.2}, 18.4);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:0.2}, 18.6);
+  tl.to("#Epaules", {opacity:1, scale: 1, duration:0.2}, 18.8);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:0.2}, 19);
+  tl.to("#Epaules", {opacity:1, scale: 1, duration:0.2}, 19.2);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:0.2}, 19.4);
+  tl.to("#Epaules", {opacity:1, scale: 1, duration:0.2}, 19.6);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:0.2}, 19.8);
+  //
+  tl.to("#BrasG", {opacity:1, scale: 1, duration:0.2}, 18.4);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:0.2}, 18.6);
+  tl.to("#BrasG", {opacity:1, scale: 1, duration:0.2}, 18.8);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:0.2}, 19);
+  tl.to("#BrasG", {opacity:1, scale: 1, duration:0.2}, 19.2);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:0.2}, 19.4);
+  tl.to("#BrasG", {opacity:1, scale: 1, duration:0.2}, 19.6);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:0.2}, 19.8);
+  //
+  tl.to("#BrasD", {opacity:1, scale: 1, duration:0.2}, 18.4);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:0.2}, 18.6);
+  tl.to("#BrasD", {opacity:1, scale: 1, duration:0.2}, 18.8);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:0.2}, 19);
+  tl.to("#BrasD", {opacity:1, scale: 1, duration:0.2}, 19.2);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:0.2}, 19.4);
+  tl.to("#BrasD", {opacity:1, scale: 1, duration:0.2}, 19.6);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:0.2}, 19.8);
+  //Pause (Toutes les lumières)
+  tl.to("#HeadR", {opacity:1, scale: 1, duration:0.2}, 20.2);
+  tl.to("#HeadR", {opacity:0, scale: 1, duration:0.2}, 20.4);
+  tl.to("#HeadR", {opacity:1, scale: 1, duration:0.2}, 20.6);
+  tl.to("#HeadR", {opacity:0, scale: 1, duration:0.2}, 20.8);
+  tl.to("#HeadR", {opacity:1, scale: 1, duration:0.2}, 21.0);
+  tl.to("#HeadR", {opacity:0, scale: 1, duration:0.2}, 21.2);
+  tl.to("#HeadR", {opacity:1, scale: 1, duration:0.2}, 21.4);
+  tl.to("#HeadR", {opacity:0, scale: 1, duration:0.2}, 21.6);
+  //
+  tl.to("#HeadL", {opacity:1, scale: 1, duration:0.2}, 20.2);
+  tl.to("#HeadL", {opacity:0, scale: 1, duration:0.2}, 20.4);
+  tl.to("#HeadL", {opacity:1, scale: 1, duration:0.2}, 20.6);
+  tl.to("#HeadL", {opacity:0, scale: 1, duration:0.2}, 20.8);
+  tl.to("#HeadL", {opacity:1, scale: 1, duration:0.2}, 21.0);
+  tl.to("#HeadL", {opacity:0, scale: 1, duration:0.2}, 21.2);
+  tl.to("#HeadL", {opacity:1, scale: 1, duration:0.2}, 21.4);
+  tl.to("#HeadL", {opacity:0, scale: 1, duration:0.2}, 21.6);
+  //
+  tl.to("#Epaules", {opacity:1, scale: 1, duration:0.2}, 20.2);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:0.2}, 20.4);
+  tl.to("#Epaules", {opacity:1, scale: 1, duration:0.2}, 20.6);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:0.2}, 20.8);
+  tl.to("#Epaules", {opacity:1, scale: 1, duration:0.2}, 21.0);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:0.2}, 21.2);
+  tl.to("#Epaules", {opacity:1, scale: 1, duration:0.2}, 21.4);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:0.2}, 21.6);
+  //
+  tl.to("#BrasG", {opacity:1, scale: 1, duration:0.2}, 20.2);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:0.2}, 20.4);
+  tl.to("#BrasG", {opacity:1, scale: 1, duration:0.2}, 20.6);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:0.2}, 20.8);
+  tl.to("#BrasG", {opacity:1, scale: 1, duration:0.2}, 21.0);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:0.2}, 21.2);
+  tl.to("#BrasG", {opacity:1, scale: 1, duration:0.2}, 21.4);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:0.2}, 21.6);
+  //
+  tl.to("#BrasD", {opacity:1, scale: 1, duration:0.2}, 20.2);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:0.2}, 20.4);
+  tl.to("#BrasD", {opacity:1, scale: 1, duration:0.2}, 20.6);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:0.2}, 20.8);
+  tl.to("#BrasD", {opacity:1, scale: 1, duration:0.2}, 21.0);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:0.2}, 21.2);
+  tl.to("#BrasD", {opacity:1, scale: 1, duration:0.2}, 21.4);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:0.2}, 21.6);
+  //
+  tl.to("#Chest", {opacity:1, scale: 1, duration:0.2}, 20.2);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:0.2}, 20.4);
+  tl.to("#Chest", {opacity:1, scale: 1, duration:0.2}, 20.6);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:0.2}, 20.8);
+  tl.to("#Chest", {opacity:1, scale: 1, duration:0.2}, 21.0);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:0.2}, 21.2);
+  tl.to("#Chest", {opacity:1, scale: 1, duration:0.2}, 21.4);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:0.2}, 21.6);
+  //
+  tl.to("#ChestL", {opacity:1, scale: 1, duration:0.2}, 20.2);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:0.2}, 20.4);
+  tl.to("#ChestL", {opacity:1, scale: 1, duration:0.2}, 20.6);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:0.2}, 20.8);
+  tl.to("#ChestL", {opacity:1, scale: 1, duration:0.2}, 21.0);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:0.2}, 21.2);
+  tl.to("#ChestL", {opacity:1, scale: 1, duration:0.2}, 21.4);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:0.2}, 21.6);
+  //
+  tl.to("#ChestR", {opacity:1, scale: 1, duration:0.2}, 20.2);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:0.2}, 20.4);
+  tl.to("#ChestR", {opacity:1, scale: 1, duration:0.2}, 20.6);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:0.2}, 20.8);
+  tl.to("#ChestR", {opacity:1, scale: 1, duration:0.2}, 21.0);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:0.2}, 21.2);
+  tl.to("#ChestR", {opacity:1, scale: 1, duration:0.2}, 21.4);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:0.2}, 21.6);
+  //
+  tl.to("#LEyes", {opacity:0, scale: 1, duration:0.2}, 21.6);
+  //Pause
+  tl.to("#Body", {opacity:1, scale:1, duration:0.2}, 22.0);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.2}, 22.0);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 22.0);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.2}, 22.0);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.2}, 22.0);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.2}, 22.0);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.2}, 22.0);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.2}, 22.0);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.2}, 22.0);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.2}, 22.0);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.2}, 22.0);
+  //Polygon Boom
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 22.2);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 22.4);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 22.4);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 22.4);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 22.6);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 22.6);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 22.4);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 22.6);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 22.8);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 23.0);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 23.6);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 23.6);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 23.8);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 23.8);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 23.6);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 23.8);
+  //Polygon Boom II
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 24.0);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 24.2);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 24.8);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 24.8);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 25);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 25);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 24.8);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 25);
+  //Polygon Boom III
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 25.8);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 26.0);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 26.6);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 26.6);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 26.8);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 26.8);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 26.6);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 26.8);
+  //Polygon+
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 28.4);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 28.4);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 28.6);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 28.6);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 28.4);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 28.6);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 29.4);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 29.6);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 31.2);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 31.2);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 31.4);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 31.4);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 31.2);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 31.4);
+  //
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 31.4);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 31.4);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 31.6);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 31.6);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 31.4);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 31.6);
+  //+
+  tl.to("#Right", {opacity:0.5, scale:1, duration:3}, 26.5);
+  tl.to("#Left", {opacity:0.5, scale:1, duration:3}, 26.5);
+  //Zoom
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#Polygon2", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#Polygon3", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#Polygon4", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#Right", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#Left", {opacity:0, scale:1, duration:0.3}, 29.8);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 30.0); 
+ //back to normal
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 30.1);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 30.2);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 30.2);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 30.2);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 30.2);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 30.2);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 30.2);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 30.2);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 30.2);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 30.2);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 30.2);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 30.2);  
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.3}, 30.2);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.3}, 30.2);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.3}, 30.2);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.3}, 30.2);
+  //+
+  tl.to("#Right", {opacity:1, scale:1, duration:0.3}, 30.2);
+  tl.to("#Left", {opacity:1, scale:1, duration:0.3}, 30.2);
+  //Polygon Boom IV
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 31.6);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 31.8);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 32.0);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 32.0);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 32.2);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 32.2);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 32.4);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 32.6);
+  //Polygon Boom V
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 33.4);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 33.6);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 34.2);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 34.2);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 34.4);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 34.4);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 34.2);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 34.4);
+  //Polygon Boom VI
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 35.2);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 35.4);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 36.0);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 36.0);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 36.2);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 36.2);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 36.0);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 36.2);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 37.0);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 37.2);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 37.8);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 37.8);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 38.0);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 38.0);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 37.8);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 38.0);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 38.8);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 39.0);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 39.6);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 39.6);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 39.8);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 39.8);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 39.6);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 39.8);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 40.6);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 40.8);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 41.4);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 41.4);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 41.6);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 41.6);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 41.4);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 41.6);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 42.4);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 42.6);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 43.2);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 43.2);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 43.4);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 43.4);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 43.2);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 43.4);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 44.2);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 44.4);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 45.0);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 45.0);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 45.2);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 45.2);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 45.0);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 45.2);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 46.0);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 46.2);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 46.8);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 46.8);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 47.0);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 47.0);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 46.8);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 47.0);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 47.8);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 48.0);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 48.6);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 48.6);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 48.8);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 48.8);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 48.6);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 48.8);
+  //Appear
+  tl.to("#Appear1", {opacity:0.75, scale:1, duration:0.2}, 37);
+  tl.to("#Appear1", {opacity:0, scale:1, duration:0.5}, 37.1);
+  tl.to("#Appear2", {opacity:0.75, scale:1, duration:0.2}, 37.2);
+  tl.to("#Appear2", {opacity:0, scale:1, duration:0.2}, 37.3);
+  tl.to("#Appear3", {opacity:0.75, scale:1, duration:0.5}, 37.4);
+  tl.to("#Appear3", {opacity:0, scale:1, duration:0.5}, 37.5);
+  tl.to("#Appear4", {opacity:0.75, scale:1, duration:0.2}, 37.6);
+  tl.to("#Appear4", {opacity:0, scale:1, duration:0.5}, 37.7);
+  //AppearII
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 38.7);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 38.8);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.2}, 38.9);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.2}, 39);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 39);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 39.1);
+  tl.to("#AppearInter7", {opacity:0.75, scale:1, duration:0.2}, 39.15);
+  tl.to("#AppearInter7", {opacity:0, scale:1, duration:0.5}, 39.2);
+  tl.to("#Appear8", {opacity:0.75, scale:1, duration:0.2}, 39.2);
+  tl.to("#Appear8", {opacity:0, scale:1, duration:0.5}, 39.3);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 39.4);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 39.5);
+  //AppearIII
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 40.5);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 40.6);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 40.7);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 40.8);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 40.9);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 41.0);
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 41.1);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 41.2);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 41.3);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 41.4);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 41.5);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 41.6);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 41.9);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 42.0);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 42.1);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 42.2);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 42.3);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 42.4);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 42.5);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 42.6);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 42.7);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 42.8);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 42.9);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 43.0);
+  //AppearIV
+  tl.to("#Appear1", {opacity:0.75, scale:1, duration:0.2}, 44.0);
+  tl.to("#Appear1", {opacity:0, scale:1, duration:0.5}, 44.1);
+  tl.to("#Appear2", {opacity:0.75, scale:1, duration:0.2}, 44.2);
+  tl.to("#Appear2", {opacity:0, scale:1, duration:0.2}, 44.3);
+  tl.to("#Appear3", {opacity:0.75, scale:1, duration:0.5}, 44.4);
+  tl.to("#Appear3", {opacity:0, scale:1, duration:0.5}, 44.5);
+  tl.to("#Appear4", {opacity:0.75, scale:1, duration:0.2}, 44.6);
+  tl.to("#Appear4", {opacity:0, scale:1, duration:0.5}, 44.7);
+  //AppearV
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 45.9);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 46.0);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.2}, 46.1);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.2}, 46.2);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 46.2);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 46.3);
+  tl.to("#AppearInter7", {opacity:0.75, scale:1, duration:0.2}, 46.35);
+  tl.to("#AppearInter7", {opacity:0, scale:1, duration:0.5}, 46.4);
+  tl.to("#Appear8", {opacity:0.75, scale:1, duration:0.2}, 46.5);
+  tl.to("#Appear8", {opacity:0, scale:1, duration:0.5}, 46.6);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 46.7);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 46.8);
+  //AppearVI
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 48);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 48.1);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 48.2);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 48.3);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 48.4);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 48.5);
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 48.6);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 48.7);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 48.8);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 48.9);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 49.0);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 49.1);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 49.4);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 49.5);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 49.6);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 49.7);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 49.8);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 49.9);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 50.0);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 50.1);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 50.2);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 50.3);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 50.4);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 50.5);
+
+  //Zoom II
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#Polygon2", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#Polygon3", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#Polygon4", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#Right", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#Left", {opacity:0, scale:1, duration:0.3}, 37.3);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 37.5); 
+ //back to normal II
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 37.6);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 37.7);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 37.7);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 37.7);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 37.7);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 37.7);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 37.7);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 37.7);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 37.7);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 37.7);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 37.7);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 37.7);  
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.3}, 37.7);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.3}, 37.7);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.3}, 37.7);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.3}, 37.7);
+  //+
+  tl.to("#Right", {opacity:1, scale:1, duration:0.3}, 37.7);
+  tl.to("#Left", {opacity:1, scale:1, duration:0.3}, 37.7);
+  //Zoom III
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#Polygon2", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#Polygon3", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#Polygon4", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#Right", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#Left", {opacity:0, scale:1, duration:0.3}, 44.8);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 44.8); 
+ //back to normal III
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 44.9);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 45);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 45);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 45);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 45);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 45);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 45);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 45);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 45);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 45);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 45);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 45);  
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.3}, 45);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.3}, 45);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.3}, 45);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.3}, 45);
+  //+
+  tl.to("#Right", {opacity:1, scale:1, duration:0.3}, 45);
+  tl.to("#Left", {opacity:1, scale:1, duration:0.3}, 45);
+  //ZoomIV
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#Polygon2", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#Polygon3", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#Polygon4", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#Right", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#Left", {opacity:0, scale:1, duration:0.3}, 51.8);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 51.8); 
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 51.9);
+  //
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 52.3);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.2}, 52.5);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 52.7);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.2}, 52.9);
+  //
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 53.5);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 53.6);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 53.7);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 53.8);
+  //
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 54.1);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.2}, 54.3);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 54.5);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.2}, 54.7);
+  //
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 55.3);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 55.4);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 55.5);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 55.6);
+  //
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 55.9);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.2}, 56.1);
+  //
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 56.4);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 56.5);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 56.6);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 56.7);
+  //
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 56.9);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.2}, 57.1);
+  //
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 57.3);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 57.4);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 57.5);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 57.6);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 57.7);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 57.8);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 57.9);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 58.0);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 58.1);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 58.2);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 58.3);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 58.4);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 58.5);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 58.6);
+  //fairy
+  tl.to("#Fairy", {opacity:1, scale:2, duration:0.1}, 58.8);
+  tl.to("#Fairy", {opacity:1, scale:1, duration:0.1}, 59.0);
+  tl.to("#Listen", {opacity:0.5, scale:1, duration:0.1}, 58.8);
+  tl.to("#Listen", {opacity:0, scale:1, duration:0.1}, 59.0);
+
+  //
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 59.2); 
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 59.3);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 59.4);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 59.4);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 59.4);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 59.4);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 59.4);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 59.4);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 59.4);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 59.4);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 59.4);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 59.4);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 59.4);  
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 60.2);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 60.4);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 60.6);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 60.6);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 60.8);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 60.8);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 61.0);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 61.2);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 62.1);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 62.3);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 62.3);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 62.3);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 62.5);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 62.5);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 62.3);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 62.5);
+  //
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 62.8);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 62.8);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 62.8);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 62.8);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 62.8);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 62.8);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 62.8);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 62.8);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 62.8);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 62.8);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 62.8);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 63.0); 
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 63.1);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 63.2);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 63.2);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 63.2);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 63.2);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 63.2);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 63.2);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 63.2);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 63.2);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 63.2);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 63.2);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 63.2);  
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 62.8);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 63.0);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 63.6);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 63.6);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 63.8);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 63.8);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 63.6);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 63.8);
+  //
+  //tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 64.6);
+  //tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 64.8);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 65.4);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 65.4);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 65.6);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 65.6);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 64.4);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 65.6);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 66.4);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 66.6);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 67.2);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 67.2);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 67.4);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 67.4);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 67.2);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 67.4);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 68.2);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 68.4);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 69.0);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 69.0);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 69.2);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 69.2);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 69.0);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 69.2);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 70.0);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 70.2);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 70.8);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 70.8);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 71.0);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 71.0);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 70.8);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 71.0);
+  //
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 66.4);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 66.4);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 66.4);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 66.4);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 66.4);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 66.4);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 66.4);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 66.4);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 66.4);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 66.4);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 66.4);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 66.6); 
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 66.7);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 66.8);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 66.8);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 66.8);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 66.8);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 66.8);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 66.8);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 66.8);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 66.8);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 66.8);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 66.8);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 66.8);  
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 72);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 72.1);
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 72.2);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 72.3);
+  //
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 73.8);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 73.8);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 73.8);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 73.8);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 73.8);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 73.8);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 73.8);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 73.8);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 73.8);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 73.8);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 73.8);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 74.0); 
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 74.1);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 74.2);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 74.2);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 74.2);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 74.2);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 74.2);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 74.2);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 74.2);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 74.2);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 74.2);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 74.2);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 74.2);  
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 73.8);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 74.0);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 74.6);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 74.6);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 74.8);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 74.8);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 74.6);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 74.8);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 75.6);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 75.8);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 76.4);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 76.4);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 76.6);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 76.6);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 76.4);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 76.6);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 77.4);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 77.6);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 78.2);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 78.2);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 78.4);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 78.4);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 78.2);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 78.4);
+  //
+  //tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 79.2);
+  //tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 79.4);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 80.0);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 80.0);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 80.2);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 80.2);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 80.0);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 80.2);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 81.0);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 81.2);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 81.8);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 81.8);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 82.0);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 82.0);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 81.8);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 82.0);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 82.8);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 83.0);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 83.6);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 83.6);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 83.8);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 83.8);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 83.6);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 83.8);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 84.6);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 84.8);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 85.4);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 85.4);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 85.6);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 85.6);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 85.4);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 85.6);
+  //
+  //tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 86.4);
+  //tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 86.6);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 87.2);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 87.2);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 87.4);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 87.4);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 87.2);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 87.4);
+  //AppearVII
+  tl.to("#Appear1", {opacity:0.75, scale:1, duration:0.2}, 74);
+  tl.to("#Appear1", {opacity:0, scale:1, duration:0.5}, 74.1);
+  tl.to("#Appear2", {opacity:0.75, scale:1, duration:0.2}, 74.2);
+  tl.to("#Appear2", {opacity:0, scale:1, duration:0.2}, 74.3);
+  tl.to("#Appear3", {opacity:0.75, scale:1, duration:0.5}, 74.4);
+  tl.to("#Appear3", {opacity:0, scale:1, duration:0.5}, 74.5);
+  tl.to("#Appear4", {opacity:0.75, scale:1, duration:0.2}, 74.6);
+  tl.to("#Appear4", {opacity:0, scale:1, duration:0.5}, 74.7);
+  //AppearVIII
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 75.7);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 75.8);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.2}, 75.9);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.2}, 76);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 76);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 76.1);
+  tl.to("#AppearInter7", {opacity:0.75, scale:1, duration:0.2}, 76.15);
+  tl.to("#AppearInter7", {opacity:0, scale:1, duration:0.5}, 76.2);
+  tl.to("#Appear8", {opacity:0.75, scale:1, duration:0.2}, 76.2);
+  tl.to("#Appear8", {opacity:0, scale:1, duration:0.5}, 76.3);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 76.4);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 76.5);
+  //AppearIX
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 77.5);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 77.6);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 77.7);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 77.8);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 77.9);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 78.0);
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 78.1);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 78.2);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 78.3);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 78.4);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 78.5);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 78.6);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 78.9);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 79.0);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 79.1);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 79.2);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 79.3);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 79.4);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 79.5);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 79.6);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 79.7);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 79.8);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 79.9);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 80.0);
+  //
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 80.8);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 80.8);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 80.8);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 80.8);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 80.8);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 80.8);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 80.8);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 80.8);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 80.8);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 80.8);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 80.8);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 81.0); 
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 81.1);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 81.2);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 81.2);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 81.2);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 81.2);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 81.2);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 81.2);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 81.2);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 81.2);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 81.2);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 81.2);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 81.2);  
+  //
+  tl.to("#Appear1", {opacity:0.75, scale:1, duration:0.2}, 81);
+  tl.to("#Appear1", {opacity:0, scale:1, duration:0.5}, 81.1);
+  tl.to("#Appear2", {opacity:0.75, scale:1, duration:0.2}, 81.2);
+  tl.to("#Appear2", {opacity:0, scale:1, duration:0.2}, 81.3);
+  tl.to("#Appear3", {opacity:0.75, scale:1, duration:0.5}, 81.4);
+  tl.to("#Appear3", {opacity:0, scale:1, duration:0.5}, 81.5);
+  tl.to("#Appear4", {opacity:0.75, scale:1, duration:0.2}, 81.6);
+  tl.to("#Appear4", {opacity:0, scale:1, duration:0.5}, 81.7);
+  //AppearII
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 82.7);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 82.8);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.2}, 82.9);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.2}, 83);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 83);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 83.1);
+  tl.to("#AppearInter7", {opacity:0.75, scale:1, duration:0.2}, 83.15);
+  tl.to("#AppearInter7", {opacity:0, scale:1, duration:0.5}, 83.2);
+  tl.to("#Appear8", {opacity:0.75, scale:1, duration:0.2}, 83.2);
+  tl.to("#Appear8", {opacity:0, scale:1, duration:0.5}, 83.3);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 83.4);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 83.5);
+  //AppearIII
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 84.5);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 84.6);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 84.7);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 84.8);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 84.9);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 85.0);
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 85.1);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 85.2);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 85.3);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 85.4);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 85.5);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 85.6);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 85.9);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 86.0);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 86.1);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 86.2);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 86.3);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 86.4);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 86.5);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 86.6);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 86.7);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 86.8);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 86.9);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 87.0);
+  //
+  //
+  //
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#Polygon2", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#Polygon3", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#Polygon4", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#Right", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#Left", {opacity:0, scale:1, duration:0.3}, 88.5);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 88.5); 
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 88.6);
+  //
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 88.8);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.2}, 89.0);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 89.2);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.2}, 89.4);
+  //
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 90.4);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 90.5);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 90.6);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 90.7);
+  //
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 90.8);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.2}, 91.0);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 91.2);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.2}, 91.4);
+  //
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 92.2);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 92.3);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 92.4);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 92.5);
+  //
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 92.6);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.2}, 92.8);
+  //
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 93.1);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 93.2);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 93.3);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 93.4);
+  //
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.2}, 93.5);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.2}, 93.7);
+  //
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 93.9);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 94);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 94.1);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 94.2);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 94.3);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 94.4);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 94.5);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 94.6);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 94.7);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 94.8);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 94.9);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 95);
+  tl.to("#Polygon1", {opacity:0.5, scale:1, duration:0.1}, 95.1);
+  tl.to("#Polygon1", {opacity:0, scale:1, duration:0.1}, 95.2);
+  //fairy
+  tl.to("#Fairy", {opacity:1, scale:2, duration:0.1}, 95.5);
+  tl.to("#Fairy", {opacity:1, scale:1, duration:0.1}, 95.7);
+  tl.to("#Listen", {opacity:0.5, scale:1, duration:0.1}, 95.5);
+  tl.to("#Listen", {opacity:0, scale:1, duration:0.1}, 95.7);
+
+  //
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 96);
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 96.1);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 96.2);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 96.2);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 96.2); 
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 96.2); 
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 96.2);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 96.2); 
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 96.2); 
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 96.2); 
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 96.2); 
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 96.2); 
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 96.2);  
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 95.8);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 96.0);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 96.6);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 96.6);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 96.8);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 96.8);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 96.6);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 96.8);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 97.6);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 97.8);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 98.4);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 98.4);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 98.6);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 98.6);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 98.4);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 98.6);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 99.4);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 99.6);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 100.2);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 100.2);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 100.4);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 100.4);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 100.2);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 100.4);
+  //
+  //tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 101.2);
+  //tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 101.4);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 102.0);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 102.0);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 102.2);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 102.2);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 102.0);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 102.2);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 103.0);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 103.2);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 103.8);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 103.8);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 104.0);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 104.0);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 103.8);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 104.0);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 104.8);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 105.0);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 105.6);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 105.6);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 105.8);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 105.8);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 105.6);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 105.8);
+   //
+   tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 106.6);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 106.8);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 107.4);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 107.4);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 107.6);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 107.6);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 107.4);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 107.6);
+  //
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 99.4);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 99.4);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 99.4);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 99.4);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 99.4);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 99.4);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 99.4);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 99.4);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 99.4);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 99.4);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 99.4);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 99.6);
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 99.7);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 99.8);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 99.8);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 99.8);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 99.8);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 99.8);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 99.8);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 99.8);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 99.8);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 99.8);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 99.8);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 99.8);  
+  //
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 103);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 103); 
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 103);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 103);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 103);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 103);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 103);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 103);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 103);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 103);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 103);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 103.2);
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 103.3);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 103.4);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 103.4);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 103.4);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 103.4);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 103.4);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 103.4);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 103.4);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 103.4);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 103.4);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 103.4);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 103.4);  
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 108.6);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 108.7);
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 108.8);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 108.9);
+  //
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 110.4);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 110.4);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 110.4);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 110.4);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 110.4);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 110.4);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 110.4);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 110.4);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 110.4);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 110.4);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 110.4);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.1}, 110.6); 
+  tl.to("#Zoom", {opacity:0, scale:1, duration:0.1}, 110.7);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 110.8);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 110.8);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 110.8);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 110.8);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 110.8);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 110.8);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 110.8);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 110.8);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 110.8);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 110.8);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 110.8);  
+  //AppearVII
+  tl.to("#Appear1", {opacity:0.75, scale:1, duration:0.2}, 110.6);
+  tl.to("#Appear1", {opacity:0, scale:1, duration:0.5}, 110.7);
+  tl.to("#Appear2", {opacity:0.75, scale:1, duration:0.2}, 110.8);
+  tl.to("#Appear2", {opacity:0, scale:1, duration:0.2}, 110.9);
+  tl.to("#Appear3", {opacity:0.75, scale:1, duration:0.5}, 111);
+  tl.to("#Appear3", {opacity:0, scale:1, duration:0.5}, 111.1);
+  tl.to("#Appear4", {opacity:0.75, scale:1, duration:0.2}, 111.2);
+  tl.to("#Appear4", {opacity:0, scale:1, duration:0.5}, 111.3);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 110.8);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 111.0);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 111.6);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 111.6);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 111.8);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 111.8);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 111.6);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 111.8);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 112.6);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 112.8);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 113.4);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 113.4);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 113.6);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 113.6);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 113.4);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 113.6);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 114.4);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 114.6);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 115.2);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 115.2);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 115.4);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 115.4);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 115.2);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 115.4);
+  //
+  //tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 116.2);
+  //tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 116.4);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 117.0);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 117.0);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 117.2);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 117.2);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 117.0);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 117.2);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 118.0);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 118.2);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 118.8);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 118.8);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 119.0);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 119.0);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 118.8);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 119.0);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 119.8);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 120.0);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 120.6);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 120.6);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 120.8);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 120.8);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 120.6);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 120.8);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 121.6);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 121.8);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 122.4);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 122.4);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 122.6);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 122.6);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 122.4);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 122.6);
+  //
+  tl.to("#Polygon1", {opacity:1, scale:1, duration:0.2}, 123.4);
+  tl.to("#Polygon1", {opacity:0.20, scale:1, duration:0.5}, 123.6);
+  tl.to("#Polygon2", {opacity:1, scale:1, duration:0.2}, 124.2);
+  tl.to("#Polygon3", {opacity:1, scale:1, duration:0.2}, 124.2);
+  tl.to("#Polygon2", {opacity:0.20, scale:1, duration:0.5}, 124.4);
+  tl.to("#Polygon3", {opacity:0.20, scale:1, duration:0.5}, 124.4);
+  tl.to("#Polygon4", {opacity:1, scale:1, duration:0.2}, 124.2);
+  tl.to("#Polygon4", {opacity:0.20, scale:1, duration:0.5}, 124.4);
+  //AppearVIII
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 112.3);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 112.4); 
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.2}, 112.5); 
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.2}, 112.6); 
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 112.6); 
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 112.7); 
+  tl.to("#AppearInter7", {opacity:0.75, scale:1, duration:0.2}, 112.75); 
+  tl.to("#AppearInter7", {opacity:0, scale:1, duration:0.5}, 112.8); 
+  tl.to("#Appear8", {opacity:0.75, scale:1, duration:0.2}, 112.8); 
+  tl.to("#Appear8", {opacity:0, scale:1, duration:0.5}, 112.9); 
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 113); 
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 113.1); 
+  //AppearIX
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 114.1); 
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 114.2); 
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 114.3); 
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 114.4); 
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 114.5); 
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 114.6); 
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 114.7); 
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 114.8); 
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 114.9); 
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 115); 
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 115.1); 
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 115.2); 
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 115.5); 
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 115.6); 
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 115.7); 
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 115.8); 
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 115.9); 
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 116.0); 
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 116.1); 
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 116.2); 
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 116.3); 
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 116.4); 
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 116.5);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 116.6);
+  //
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 117.4);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 117.4);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 117.4);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 117.4);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 117.4);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 117.4);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 117.4);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 117.4);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 117.4);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 117.4);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 117.4);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.09}, 117.6);
+  tl.to("#Zoom", {opacity:0, duration:0.1}, 117.7);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 117.8);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 117.8);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 117.8);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 117.8);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 117.8);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 117.8);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 117.8);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 117.8);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 117.8);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 117.8);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 117.8);  
+  // repeat
+  //
+  tl.to("#Body", {opacity:0, scale:1, duration:0.3}, 119.5);
+  tl.to("#HEyes", {opacity:0, scale:1, duration:0.3}, 119.5);
+  tl.to("#Chest", {opacity:0, scale:1, duration:0.3}, 119.5);
+  tl.to("#HeadR", {opacity:0, scale:1, duration:0.3}, 119.5);
+  tl.to("#HeadL", {opacity:0, scale:1, duration:0.3}, 119.5);
+  tl.to("#ChestL", {opacity:0, scale:1, duration:0.3}, 119.5);
+  tl.to("#ChestR", {opacity:0, scale:1, duration:0.3}, 119.5);
+  tl.to("#BrasD", {opacity:0, scale:1, duration:0.3}, 119.5);
+  tl.to("#BrasG", {opacity:0, scale:1, duration:0.3}, 119.5);
+  tl.to("#Epaules", {opacity:0, scale:1, duration:0.3}, 119.5);
+  tl.to("#LEyes", {opacity:0, scale:1, duration:0.3}, 119.5);
+  tl.to("#Zoom", {opacity:1, scale:1, duration:0.09}, 119.7);
+  tl.to("#Zoom", {opacity:0, duration:0.1}, 119.8);
+  tl.to("#Body", {opacity:1, scale:1, duration:0.3}, 119.9);
+  tl.to("#HEyes", {opacity:1, scale:1, duration:0.3}, 119.9);
+  tl.to("#Chest", {opacity:1, scale:1, duration:0.3}, 119.9);
+  tl.to("#HeadR", {opacity:1, scale:1, duration:0.3}, 119.9);
+  tl.to("#HeadL", {opacity:1, scale:1, duration:0.3}, 119.9);
+  tl.to("#ChestL", {opacity:1, scale:1, duration:0.3}, 119.9);
+  tl.to("#ChestR", {opacity:1, scale:1, duration:0.3}, 119.9);
+  tl.to("#BrasD", {opacity:1, scale:1, duration:0.3}, 119.9);
+  tl.to("#BrasG", {opacity:1, scale:1, duration:0.3}, 119.9);
+  tl.to("#Epaules", {opacity:1, scale:1, duration:0.3}, 119.9);
+  tl.to("#LEyes", {opacity:1, scale:1, duration:0.3}, 119.9);  
+  //
+  tl.to("#Appear1", {opacity:0.75, scale:1, duration:0.2}, 117.6); 
+  tl.to("#Appear1", {opacity:0, scale:1, duration:0.5}, 117.7); 
+  tl.to("#Appear2", {opacity:0.75, scale:1, duration:0.2}, 117.8); 
+  tl.to("#Appear2", {opacity:0, scale:1, duration:0.2}, 117.9); 
+  tl.to("#Appear3", {opacity:0.75, scale:1, duration:0.5}, 118.0); 
+  tl.to("#Appear3", {opacity:0, scale:1, duration:0.5}, 118.1); 
+  tl.to("#Appear4", {opacity:0.75, scale:1, duration:0.2}, 118.2); 
+  tl.to("#Appear4", {opacity:0, scale:1, duration:0.5}, 118.3); 
+  //AppearII
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 119.3); 
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 119.4); 
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.2}, 119.5); 
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.2}, 119.6); 
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 119.6);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 119.7); 
+  tl.to("#AppearInter7", {opacity:0.75, scale:1, duration:0.2}, 119.75); 
+  tl.to("#AppearInter7", {opacity:0, scale:1, duration:0.5}, 119.8); 
+  tl.to("#Appear8", {opacity:0.75, scale:1, duration:0.2}, 119.8); 
+  tl.to("#Appear8", {opacity:0, scale:1, duration:0.5}, 119.9); 
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 120.0); 
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 120.1); 
+  //AppearIII
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 121.6); 
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 121.7); 
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 121.8);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 121.9);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 122.0); 
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 122.1);
+  tl.to("#Appear5", {opacity:0.75, scale:1, duration:0.2}, 122.2);
+  tl.to("#Appear5", {opacity:0, scale:1, duration:0.5}, 122.3);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 122.4);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 122.5);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 122.6);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 122.7);
+  tl.to("#Appear6", {opacity:0.75, scale:1, duration:0.5}, 123.0);
+  tl.to("#Appear6", {opacity:0, scale:1, duration:0.5}, 123.1);
+  tl.to("#Appear7", {opacity:0.75, scale:1, duration:0.2}, 123.2);
+  tl.to("#Appear7", {opacity:0, scale:1, duration:0.5}, 123.3);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 123.4);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 123.5);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 123.6);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 123.7);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 123.8);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 123.9);
+  tl.to("#Appear9", {opacity:0.75, scale:1, duration:0.2}, 124.0);
+  tl.to("#Appear9", {opacity:0, scale:1, duration:0.5}, 124.1); 
+  //Fade away
+  tl.to("#Body", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#HEyes", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#Epaules", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#BrasD", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#BrasG", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#Chest", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#ChestL", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#ChestR", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#HeadL", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#HeadR", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#Left", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#Right", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#Polygon1", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#Polygon2", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#Polygon3", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#Polygon4", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#Unmovable",{opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#LEyes", {opacity:0, scale: 1, duration:4.5}, 125.0);
+  tl.to("#Char", {opacity:0, scale: 1, duration:4.5}, 130.0);
+  tl.to("#Floor", {opacity:0, scale: 1, duration:4.5}, 130.0);
+  tl.to("#Credit", {opacity:1, scale:1, duration:3.5}, 134.5)
+
+
+
+
+
+
+
+    
+
+
+       
+
+    }
+
+
+    /* OUTILS pour la lecture */
+    audio.addEventListener("play", function() {
+        let now = ( this.currentTime);
+        let dur = ( this.duration);
+        tl.progress(now/dur).play();
+    });
+
+    audio.addEventListener("pause", function() {
+        tl.pause();
+        let now = ( this.currentTime);
+        let dur = ( this.duration);
+        tl.progress(now/dur);
+    });
+
+    // seeked
+    audio.addEventListener("seeking", function(e) {
+        let now = ( this.currentTime);
+        let dur = ( this.duration);
+        tl.progress(now/dur).pause();
+    });
+
+
+
+    </script>
+</body>
+</html>
